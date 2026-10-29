@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9edf2;
+    color: #394653;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 40px 20px 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #526b82;
+}
+
+header p {
+    color: #7b8997;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.filtro {
+    padding: 12px 24px;
+    border: 1px solid #aab9c9;
+    border-radius: 25px;
+    background: #f8fafc;
+    color: #526b82;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover {
+    background: #d5e0eb;
+}
+
+.filtro.ativo {
+    background: #829bb3;
+    border-color: #829bb3;
+    color: white;
+}
+
+.total {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #7b8997;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.miniatura {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: surgir 0.5s;
+}
+
+.miniatura:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px #829bb366;
+    filter: brightness(1.08);
+}
+
+.miniatura:focus-visible {
+    outline: 3px solid #829bb3;
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.destaque {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.galeria.filtrada .miniatura {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.miniatura.oculta {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 70px;
+    background: #293746ed;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.modal.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-conteudo {
+    max-width: 900px;
+    max-height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+.modal.ativo .modal-conteudo {
+    transform: scale(1);
+}
+
+.modal-conteudo img {
+    display: block;
+    max-width: 100%;
+    max-height: 55vh;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.info {
+    margin-top: 15px;
+}
+
+.info h2 {
+    margin-bottom: 8px;
+    color: #d4e4f3;
+}
+
+.info p {
+    margin-bottom: 6px;
+    color: #e0e7ef;
+}
+
+.detalhes span {
+    text-transform: capitalize;
+}
+
+.contador {
+    color: #b9c8d8;
+    font-size: 14px;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    color: #e0e7ef;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: #a9c7e2;
+}
+
+.navegacao {
+    position: absolute;
+    top: 50%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #829bb366;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.navegacao:hover {
+    background: #829bb3;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.proximo {
+    right: 15px;
+}
+
+@media (max-width: 900px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .destaque,
+    .horizontal,
+    .vertical {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .modal {
+        padding: 70px 15px 20px;
+    }
+
+    .navegacao {
+        top: auto;
+        bottom: 15px;
+        transform: none;
+    }
+}

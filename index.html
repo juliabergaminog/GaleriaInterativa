@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Galeria de Imagens da Beabadoobee</h1>
+        <p>Explore as fotos de Beabadoobe!</p>
+    </header>
+
+    <nav class="filtros">
+        <button class="filtro ativo" data-filtro="todas">Todos</button>
+        <button class="filtro" data-filtro="branco">Branco</button>
+        <button class="filtro" data-filtro="azul">Azul</button>
+        <button class="filtro" data-filtro="verde">Verde</button>
+    </nav>
+
+    <p id="totalImagens" class="total"></p>
+
+    <main class="galeria" id="galeria">
+        <img src="img/pequena1bea.jpg" alt="Beabadoobe" class="miniatura destaque"
+            data-categoria="branco"
+            data-titulo="Beabadoobee para a Interview Magazine: A Estética Y2K de "This Is How Tomorrow Moves"
+            data-descricao="A fotografia pertence à era do álbum This Is How Tomorrow Moves (2024) e faz parte de uma sessão exclusiva fotografada por Tyrell Hampton para a matéria "Beabadoobee Just Wants to Ride It Out", publicada na Interview Magazine (Edição de Setembro #556)."
+            data-local="Los Angeles, Califórnia, EUA."
+            tabindex="0">
+
+        <img src="img/horizontalbranco.jpg" alt="Beabadoobe" class="miniatura horizontal"
+            data-categoria="branco"
+            data-titulo="This Is How Tomorrow Moves: Beabadoobee"
+            data-descricao="Com o estilo indie característico da era do seu álbum This Is How Tomorrow Moves (2024), Beabadoobee surge num vestido branco delicado com detalhes rendados e maquiagem marcante. Fotografado por Daniel Prakopcyk, este ensaio serviu como matéria de capa oficial para a edição de Outono de 2024 da revista Alternative Press (AP Magazine)"
+            data-local="Los Angeles, Califórnia, EUA"
+            tabindex="0">
+
+        <img src="img/pequena2bea.jpg" alt="Beabadoobe" class="miniatura"
+            data-categoria="branco"
+            data-titulo="O Universo Intimista de Beatopia: Retrato em Preto e Branco de Beabadoobee"
+            data-descricao="A foto pertence à era do álbum Beatopia (lançado em julho de 2022). Trata-se de um retrato de divulgação oficial tirado por Erika Kamano para o selo Dirty Hit, utilizado na promoção do disco e em entrevistas da época (como para o portal Bandwagon Asia)."
+            data-local="Londres, Reino Unido."
+            tabindex="0">
+
+        <img src="img/verticalbea.jpg" alt="Beabadoobe" class="miniatura vertical"
+            data-categoria="azul"
+            data-titulo="Beabadoobee para a Revista Nylon: Estilo Prep e o Lançamento de "This Is How Tomorrow Moves"
+            data-descricao="A fotografia pertence à era do álbum This Is How Tomorrow Moves (2024). Trata-se de uma sessão fotográfica exclusiva capturada pelo fotógrafo Ryan Saradjola para a matéria de capa Beabadoobee Figures Out Her Fame, publicada na revista Nylon em julho de 2024 para promover o lançamento do disco."
+            data-local="Londres, Reino Unido."
+            tabindex="0">
+
+        <img src="img/pequena3bea.jpg" alt="Beabadoobe" class="miniatura"
+            data-categoria="azul"
+            data-titulo="Energia ao Vivo: Beabadoobee em Ação no Festival All Points East"
+            data-descricao="A imagem pertence à era do álbum This Is How Tomorrow Moves (2024). Trata-se de uma fotografia tirada durante a apresentação de Beabadoobee no festival All Points East, realizado no Victoria Park, onde a cantora atuou como uma das atrações principais do dia encabeçado por Mitski."
+            data-local="Victoria Park, Londres, Reino Unido."
+            tabindex="0">
+
+        <img src="img/3azuis.jpg" alt="Beabadoobe" class="miniatura horizontal"
+            data-categoria="azul"
+            data-titulo="Versatilidade e Estilo: A Evolução Visual de Beabadoobee"
+            data-descricao="Uma composição que destaca três visuais distintos da trajetória de Beabadoobee: o charme urbano em conjunto azul-claro cintilante nas ruas de Los Angeles, a estética forte e invernal com casaco felpudo ao ar livre, e uma pose clássica e descontraída vestindo t-shirt de mangas bicolores e calças de ganga. O trio demonstra a sua capacidade de alternar entre produções de moda arrojadas e um estilo quotidiano e nostálgico."
+            data-local="Reino Unido"
+            tabindex="0">
+
+        <img src="img/pequena4bea.jpg" alt="Beabadoobe" class="miniatura"
+            data-categoria="azul"
+            data-titulo="Estética Grunge e Rebelde: Beabadoobee na Era Pylon"
+            data-descricao="A fotografia pertence à era do álbum Pylon (lançado em setembro de 2026). Trata-se de uma imagem promocional oficial fotografada por Erika Kamano para a divulgação do disco e do single Switchblade, lançada pela editora Dirty Hit / Interscope Records."
+            data-local="Reino Unido"
+            tabindex="0">
+
+        <img src="img/grandebea.jpg" alt="Beabadoobe" class="miniatura"
+            data-categoria="verde"
+            data-titulo="Nostalgia e Cabelo Loiro: A Era De Ouro de "Fake It Flowers""
+            data-descricao="Deitada na relva com uma camisola vermelha aconchegante e o marcante cabelo loiro da época, Beabadoobee apoia a cabeça na mão enquanto olha fixamente para a câmara. A foto capta perfeitamente a estética lo-fi e o estilo alt-rock dos anos 90 que a projetou globalmente no lançamento do seu disco de estreia."
+            data-local="Londres, Reino Unido."
+            tabindex="0">
+
+        <img src="img/3verdes.jpg" alt="Beabadoobe" class="miniatura horizontal"
+            data-categoria="verde"
+            data-titulo="Estética Bucólica e Natural: A Evolução Visual de Beabadoobee entre Campos e Outonos"
+            data-descricao="Uma composição de três retratos ao ar livre que capturam o lado sereno e melancólico de Beabadoobee em harmonia com a natureza. O trio une a estética aconchegante de outono com camisola bordada e folhas secas, a leveza do campo verde num dia ensolarado e a postura contemplativa deitada sobre a relva com um casaco invernal."
+            data-local="Londres"
+            tabindex="0">
+    </main>
+
+    <!-- Parte B: modal -->
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar">&times;</button>
+        <button id="anterior" class="navegacao anterior">&#10094;</button>
+
+        <div class="modal-conteudo">
+            <img src="" alt="Imagem ampliada" id="imagemModal">
+            <div class="info">
+                <h2 id="tituloModal"></h2>
+                <p id="descricaoModal"></p>
+                <p class="detalhes">
+                    Categoria: <span id="categoriaModal"></span>
+                    | Local: <span id="localModal"></span>
+                </p>
+                <p id="contador" class="contador"></p>
+            </div>
+        </div>
+
+        <button id="proximo" class="navegacao proximo">&#10095;</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
